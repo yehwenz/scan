@@ -7,19 +7,17 @@ import fs from 'node:fs'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    vue(),
-    vueDevTools(),
-  ],
+  base: '/WebQRCodeScaner/',
+  plugins: [vue(), vueDevTools()],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
   server: {
     https: {
       key: fs.readFileSync(`${__dirname}/localhost-key.pem`),
-      cert: fs.readFileSync(`${__dirname}/localhost.pem`)
-    }
-  }
+      cert: fs.readFileSync(`${__dirname}/localhost.pem`),
+    },
+  },
 })

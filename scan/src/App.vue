@@ -5,7 +5,8 @@ import { RouterView } from 'vue-router'
 <template>
   <v-app>
     <v-app-bar>
-      
+      <v-app-bar-nav-icon icon="mdi-qrcode-scan" />
+      <v-app-bar-title>WebScaner</v-app-bar-title>
     </v-app-bar>
     <v-main>
       <router-view />
